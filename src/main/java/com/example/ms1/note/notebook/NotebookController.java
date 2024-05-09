@@ -22,22 +22,13 @@ public class NotebookController {
         return "redirect:/";
     }
 
-//    @PostMapping("/groups/{notebookId}/books/write")
-//    public String groupWrite(@PathVariable("notebookId") Long notebookId) {
-//        Notebook parent = notebookService.getNotebook(notebookId);
-//
-//        Notebook child = new Notebook();
-//        child.setName("새노트북");
-//
-//        Note note = mainService.saveDefault(parent);
-//        child.addNote(note);
-//        noteService.getNotebook(child.getId());
-//
-//        parent.addChildren(child);
-//        noteService.getNotebook(parent.getId());
-//
-//        return "redirect:/";
-//    }
+    @PostMapping("/groups/{notebookId}/books/write")
+    public String groupWrite(@PathVariable("notebookId") Long notebookId) {
+        mainService.saveGroupNotebook(notebookId);
+
+        return "redirect:/";
+    }
+
 
     @GetMapping("/books/{id}")
     public String detail(@PathVariable("id") Long id) {

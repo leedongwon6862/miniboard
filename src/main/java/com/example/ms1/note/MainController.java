@@ -15,6 +15,7 @@ public class MainController {
         MainDataDto mainDataDto = mainService.getDefaultMainData();
         model.addAttribute("mainDataDto", mainDataDto);
 
+
         return "main";
     }
 }

@@ -1,6 +1,6 @@
-package com.example.ms1.note.note;
+package com.example.ms5.note.note;
 
-import com.example.ms1.note.notebook.Notebook;
+import com.example.ms5.note.notebook.Notebook;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

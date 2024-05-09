@@ -1,6 +1,6 @@
-package com.example.ms5.note.note;
+package com.example.ms1.note.note;
 
-import com.example.ms5.note.notebook.Notebook;
+import com.example.ms1.note.notebook.Notebook;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

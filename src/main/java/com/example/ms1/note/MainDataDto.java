@@ -1,7 +1,7 @@
-package com.example.ms5.note;
+package com.example.ms1.note;
 
-import com.example.ms5.note.note.Note;
-import com.example.ms5.note.notebook.Notebook;
+import com.example.ms1.note.note.Note;
+import com.example.ms1.note.notebook.Notebook;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

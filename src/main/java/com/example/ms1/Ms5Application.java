@@ -1,4 +1,4 @@
-package com.example.ms5;
+package com.example.ms1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

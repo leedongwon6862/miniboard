@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<form th:action="@{|/user/signup|}"  th:object="${userCreateForm}" method="post">
+    <input type="text" placeholder="아이디" th:field="*{loginId}">
+    <p th:if="${#fields.hasErrors('loginId')}" th:errors="*{loginId}"></p>
+    <input type="email" placeholder="이메일" th:field="*{email}">
+    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+    <input type="password" placeholder="비밀번호" th:field="*{password}">
+    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+    <input type="text" placeholder="닉네임" th:field="*{nickname}">
+    <p th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}"></p>
+    <input type="submit" class="btn" value="회원가입">
+</form>
+
+</body>
+</html>

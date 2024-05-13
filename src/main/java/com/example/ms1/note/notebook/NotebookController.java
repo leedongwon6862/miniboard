@@ -37,4 +37,17 @@ public class NotebookController {
 
         return "redirect:/books/%d/notes/%d".formatted(id, note.getId());
     }
+
+    @PostMapping("/books/{id}/delete")
+    public String delete(@PathVariable("id") Long id){
+        notebookService.delete(id);
+        return "redirect:/";
+    }
+
+    @PostMapping("/books/{id}/update")
+    public String update(@PathVariable("id")Long id , String name ,Long targetNoteId){
+        notebookService.update(id,name);
+        return"redirect:/books/%d/notes/%d".formatted(id,targetNoteId);
+
+    }
 }

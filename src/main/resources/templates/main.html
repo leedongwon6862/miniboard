@@ -48,6 +48,28 @@
             <form th:action="@{|/groups/${targetNotebook.id}/books/write|}" method="post">
                 <input type="submit" value="하위 노트북 추가">
             </form>
+
+            <form th:action="@{|/books/${targetNotebook.id}/delete|}" method="post">
+                <input type="submit" value="노트북 삭제">
+            </form>
+
+            <!-- The button to open modal -->
+            <label for="my_modal_6" class="btn">노트북 이름 변경</label>
+
+            <!-- Put this part before </body> tag -->
+            <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+            <div class="modal" role="dialog">
+                <div class="modal-box">
+                    <form th:action="@{|/books/${targetNotebook.id}/update|}" method="post">
+                        <input type="hidden" name="targetNoteId"  th:value="${targetNote.id}">
+                    <input type="text" name="name" placeholder="새로운 닉네임">
+                    <input type="submit" class="btn">
+                    </form>
+                    <div class="modal-action">
+                        <label for="my_modal_6" class="btn">Close!</label>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="bg-sky-100 w-[20%] h-[800px] text-center ">
             <ul class="h-[100%] overflow-scroll">
